@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studio Likewhat</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <section class="intro">
+    <div class="logo-grid">
+      <a href="studio.html" class="logo-word">studio</a>
+      <a href="like.html"   class="logo-word">like</a>
+      <div class="logo-bottom-row">
+        <a href="what.html"    class="logo-word">what</a>
+        <a href="ongoing.html" class="logo-line">
+          <span class="line-bar"></span>
+          <span class="logo-question">?</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const words = document.querySelectorAll('.logo-word, .logo-line');
+
+    words.forEach(el => {
+      el.addEventListener('mouseenter', () => {
+        document.body.classList.add('dark');
+      });
+      el.addEventListener('mouseleave', () => {
+        document.body.classList.remove('dark');
+      });
+    });
+  </script>
+
+</body>
+</html>
